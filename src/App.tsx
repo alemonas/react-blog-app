@@ -1,15 +1,15 @@
 import React from 'react';
+import { Provider } from 'react-redux';
+import store from './store';
+import Counter from './components/counter/Counter'
+
 
 const App: React.FC = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <p>
-          My Awesome React Project
-        </p>
-      </header>
-    </div>
+    <Provider store={store}>
+      <Counter />
+    </Provider>
   );
-}
+};
 
 export default App;
